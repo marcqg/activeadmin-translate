@@ -13,7 +13,7 @@ module ActiveAdmin
         ::I18n.available_locales.each_with_index do |locale, index|
           @table << tr do
             th do
-              header_content_for(attr) - locale.to_s
+              "#{header_content_for(attr)} - #{locale.to_s}"
             end
             @collection.each do |record|
               td do
