@@ -34,7 +34,7 @@ module ActiveAdmin
       # @return [String] the script tag
       #
       def tab_script
-        template.content_tag(:script, "$('.activeadmin-translate').tabs();".html_safe)
+        template.content_tag(:script, "jQuery(function($) {$('.activeadmin-translate').tabs();});".html_safe)
       end
 
       # Create the local field sets to enter the inputs per locale.
