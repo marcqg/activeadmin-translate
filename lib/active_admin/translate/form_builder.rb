@@ -20,7 +20,7 @@ module ActiveAdmin
         template.assign(has_many_block: true)
 
         html << template.content_tag(:div, :class => "activeadmin-translate #{ translate_id }") do
-          locale_tabs << locale_fields(name, block) << tab_script
+          locale_tabs << locale_fields(name, block)
         end
 
         template.concat(html) if template.output_buffer
@@ -28,14 +28,6 @@ module ActiveAdmin
       end
 
       protected
-
-      # Create the script to activate the tabs on insertion.
-      #
-      # @return [String] the script tag
-      #
-      def tab_script
-        template.content_tag(:script, "jQuery(function($) {$('.activeadmin-translate').tabs();});".html_safe)
-      end
 
       # Create the local field sets to enter the inputs per locale.
       #

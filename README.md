@@ -9,7 +9,7 @@ between the locales.
 Add the gem to your `Gemfile`
 
 ```ruby
-gem 'activeadmin-translate', github: 'twintags/activeadmin-translate'
+gem 'activeadmin-translate', github: 'marcqg/activeadmin-translate'
 ```
 
 and install it with Bundler:
@@ -35,6 +35,14 @@ You need to import the SASS for styling the tabs to `app/assets/stylesheets/acti
 
 ```css
 @import "active_admin/translate";
+```
+
+### Include ActiveAdmin javascript
+
+You need to add this to `application.js`:
+
+```js
+$('.activeadmin-translate').tabs();
 ```
 
 ## Usage
